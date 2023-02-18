@@ -1,10 +1,5 @@
 {
   "sections": {
-    "c92c7963-88cf-475d-80b5-7a842f8565fb": {
-      "type": "new-section",
-      "settings": {
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -51,6 +46,11 @@
         "show_text_below": false
       }
     },
+    "c92c7963-88cf-475d-80b5-7a842f8565fb": {
+      "type": "new-section",
+      "settings": {
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -80,8 +80,8 @@
     }
   },
   "order": [
-    "c92c7963-88cf-475d-80b5-7a842f8565fb",
     "image_banner",
+    "c92c7963-88cf-475d-80b5-7a842f8565fb",
     "featured_collection"
   ]
 }

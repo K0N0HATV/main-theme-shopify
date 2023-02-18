@@ -1,13 +1,39 @@
 <section>
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cum impedit aspernatur debitis beatae perferendis vel expedita ab sed quisquam quae ullam corrupti, sunt delectus, omnis provident, ipsam accusantium atque?
+  <p class="p">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cum impedit aspernatur debitis beatae perferendis vel expedita ab sed quisquam quae ullam corrupti, sunt delectus, omnis provident, ipsam accusantium atque?
+  </p>
+  <img
+    src="{{ section.settings.favouriteImage | image_url: width: 300 }}"
+    alt="The Soap Store"
+    class="css--class1 css--class2"
+    width="300"
+    height="300"
+    loading="lazy"
+    id="logo">
 </section>
+
+{% style %}
+  .p {
+    color: {{ section.settings.favouriteColor }}
+  }
+{% endstyle %}
 
 {% schema %}
   {
     "name": "main secting",
     "tag": "section",
     "class": "section",
-    "settings": [],
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favouriteImage",
+        "label": "change image"
+      }, {
+        "type": "color",
+        "id": "favouriteColor",
+        "label": "change color"
+      }
+    ],
     "presets": [
       {
         "name": "our secting"
