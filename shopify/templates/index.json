@@ -1,12 +1,17 @@
 {
   "sections": {
+    "c92c7963-88cf-475d-80b5-7a842f8565fb": {
+      "type": "new-section",
+      "settings": {
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "someName": "some text test",
             "heading_size": "h0"
           }
         },
@@ -75,6 +80,7 @@
     }
   },
   "order": [
+    "c92c7963-88cf-475d-80b5-7a842f8565fb",
     "image_banner",
     "featured_collection"
   ]
