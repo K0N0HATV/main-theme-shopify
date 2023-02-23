@@ -1,5 +1,8 @@
 {
   "general": {
+    "runner": {
+      "header": "runner-polish"
+    },
     "password_page": {
       "login_form_heading": "Wejdź do sklepu, wpisując hasło:",
       "login_password_button": "Wejdź, wpisując hasło",
@@ -8,13 +11,15 @@
       "login_form_error": "Nieprawidłowe hasło!",
       "login_form_submit": "Enter",
       "admin_link_html": "Czy jesteś właścicielem sklepu? <a href=\"\/admin\" class=\"link underlined-link\">Zaloguj się tutaj<\/a>",
-      "powered_by_shopify_html": "Ten sklep będzie obsługiwany przez {{ shopify }}"
+      "powered_by_shopify_html": "Ten sklep będzie obsługiwany przez {{ shopify }}",
+      "my_own_field": "content"
     },
     "social": {
       "alt_text": {
         "share_on_facebook": "Udostępnij na Facebooku",
         "share_on_twitter": "Tweetuj na Twitterze",
-        "share_on_pinterest": "Przypnij do tablicy Pinterest"
+        "share_on_pinterest": "Przypnij do tablicy Pinterest",
+        "share_my_text": "sdoifhuysdgfuygasdjfb"
       },
       "links": {
         "twitter": "Twitter",

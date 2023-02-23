@@ -1,43 +1,98 @@
-<section>
-  <p class="p">
-    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta cum impedit aspernatur debitis beatae perferendis vel expedita ab sed quisquam quae ullam corrupti, sunt delectus, omnis provident, ipsam accusantium atque?
-  </p>
-  <img
-    src="{{ section.settings.favouriteImage | image_url: width: 300 }}"
-    alt="The Soap Store"
-    class="css--class1 css--class2"
-    width="300"
-    height="300"
-    loading="lazy"
-    id="logo">
-</section>
+<div style="overflow: hidden;">
+  <div class="wrapper">
+    {% for i in (1..2) %}
+      <div class="wrapper__edgrunner">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'labelText' %}
+              <div>
+                {{ 'general.runner.header' | t }}
+                {% comment %} {{ block.settings.textId }} {% endcomment %}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% comment %}
+  "runner": {
+     "header": "runner"
+  },
+{% endcomment %}
+{% comment %}
+  "runner": {
+    "header": "runner-polish"
+  },
+{% endcomment %}
 
 {% style %}
   .p {
-    color: {{ section.settings.favouriteColor }}
+    color: {{ section.settings.favouriteColor }};
   }
 {% endstyle %}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .wrapper {
+    background-color: blue;
+    display: flex;
+    overflow: hidden;
+    width: 200vw;
+  }
+
+  .wrapper__edgrunner {
+    width: 100%;
+    height: 100px;
+    animation-duration: 5s;
+    background-color: aqua;
+    animation-name: runner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @keyframes runner {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
 
 {% schema %}
-  {
-    "name": "main secting",
-    "tag": "section",
-    "class": "section",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "favouriteImage",
-        "label": "change image"
-      }, {
-        "type": "color",
-        "id": "favouriteColor",
-        "label": "change color"
-      }
-    ],
-    "presets": [
-      {
-        "name": "our secting"
-      }
-    ]
-  }
+{
+  "name": "main secting",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "favouriteColor",
+      "label": "change color"
+    }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "labelText",
+      "name": "string",
+      "settings": [
+        {
+          "id": "textId",
+          "type": "text",
+          "label": "t:sections.all.padding.section_padding_heading"
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
