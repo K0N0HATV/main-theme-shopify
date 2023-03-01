@@ -46,51 +46,6 @@
         "show_text_below": false
       }
     },
-    "c92c7963-88cf-475d-80b5-7a842f8565fb": {
-      "type": "new-section",
-      "blocks": {
-        "5ccb8594-bb64-44ee-a678-e3f6779c0ce8": {
-          "type": "labelText",
-          "settings": {
-            "textId": ""
-          }
-        },
-        "5c63f955-b0ed-4022-8d73-52dd03bfa997": {
-          "type": "labelText",
-          "settings": {
-            "textId": ""
-          }
-        },
-        "55c56fd2-4060-4a6b-af72-29d25557be8a": {
-          "type": "labelText",
-          "settings": {
-            "textId": ""
-          }
-        },
-        "76c59934-6e65-4986-a11e-e5b0d1a0e728": {
-          "type": "labelText",
-          "settings": {
-            "textId": ""
-          }
-        },
-        "b076b344-7439-4c60-a69e-c953e4afd506": {
-          "type": "labelText",
-          "settings": {
-            "textId": ""
-          }
-        }
-      },
-      "block_order": [
-        "5ccb8594-bb64-44ee-a678-e3f6779c0ce8",
-        "5c63f955-b0ed-4022-8d73-52dd03bfa997",
-        "55c56fd2-4060-4a6b-af72-29d25557be8a",
-        "76c59934-6e65-4986-a11e-e5b0d1a0e728",
-        "b076b344-7439-4c60-a69e-c953e4afd506"
-      ],
-      "settings": {
-        "favouriteColor": ""
-      }
-    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -201,7 +156,6 @@
   },
   "order": [
     "image_banner",
-    "c92c7963-88cf-475d-80b5-7a842f8565fb",
     "featured_collection",
     "12b72194-7c4e-4901-b785-f086522ec2fa",
     "0f822c13-56af-479c-b3d0-712a2c7386a9"
