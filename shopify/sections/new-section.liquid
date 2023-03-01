@@ -6,8 +6,7 @@
           {% case block.type %}
             {% when 'labelText' %}
               <div>
-                {{ 'general.runner.header' | t }}
-                {% comment %} {{ block.settings.textId }} {% endcomment %}
+                {{ block.settings.textId }}
               </div>
           {% endcase %}
         {% endfor %}
@@ -15,17 +14,6 @@
     {% endfor %}
   </div>
 </div>
-
-{% comment %}
-  "runner": {
-     "header": "runner"
-  },
-{% endcomment %}
-{% comment %}
-  "runner": {
-    "header": "runner-polish"
-  },
-{% endcomment %}
 
 {% style %}
   .p {
@@ -92,6 +80,11 @@
           "label": "t:sections.all.padding.section_padding_heading"
         }
       ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "our secting"
     }
   ]
 }

@@ -48,13 +48,53 @@
     },
     "c92c7963-88cf-475d-80b5-7a842f8565fb": {
       "type": "new-section",
+      "blocks": {
+        "5ccb8594-bb64-44ee-a678-e3f6779c0ce8": {
+          "type": "labelText",
+          "settings": {
+            "textId": ""
+          }
+        },
+        "5c63f955-b0ed-4022-8d73-52dd03bfa997": {
+          "type": "labelText",
+          "settings": {
+            "textId": ""
+          }
+        },
+        "55c56fd2-4060-4a6b-af72-29d25557be8a": {
+          "type": "labelText",
+          "settings": {
+            "textId": ""
+          }
+        },
+        "76c59934-6e65-4986-a11e-e5b0d1a0e728": {
+          "type": "labelText",
+          "settings": {
+            "textId": ""
+          }
+        },
+        "b076b344-7439-4c60-a69e-c953e4afd506": {
+          "type": "labelText",
+          "settings": {
+            "textId": ""
+          }
+        }
+      },
+      "block_order": [
+        "5ccb8594-bb64-44ee-a678-e3f6779c0ce8",
+        "5c63f955-b0ed-4022-8d73-52dd03bfa997",
+        "55c56fd2-4060-4a6b-af72-29d25557be8a",
+        "76c59934-6e65-4986-a11e-e5b0d1a0e728",
+        "b076b344-7439-4c60-a69e-c953e4afd506"
+      ],
       "settings": {
+        "favouriteColor": ""
       }
     },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Tile Collection",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -77,11 +117,93 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
+    },
+    "12b72194-7c4e-4901-b785-f086522ec2fa": {
+      "type": "collage",
+      "blocks": {
+        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-0": {
+          "type": "image",
+          "settings": {
+          }
+        },
+        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-1": {
+          "type": "product",
+          "settings": {
+            "product": "",
+            "second_image": false
+          }
+        },
+        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-2": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-0",
+        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-1",
+        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-2"
+      ],
+      "settings": {
+        "heading": "Text Content",
+        "heading_size": "h0",
+        "desktop_layout": "right",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-2",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "0f822c13-56af-479c-b3d0-712a2c7386a9": {
+      "type": "rich-text",
+      "blocks": {
+        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-0",
+        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-1",
+        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-2"
+      ],
+      "settings": {
+        "desktop_content_position": "right",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "image_banner",
     "c92c7963-88cf-475d-80b5-7a842f8565fb",
-    "featured_collection"
+    "featured_collection",
+    "12b72194-7c4e-4901-b785-f086522ec2fa",
+    "0f822c13-56af-479c-b3d0-712a2c7386a9"
   ]
 }

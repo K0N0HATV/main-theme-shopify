@@ -1,0 +1,73 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("./Proxima Nova Regular.eot");
+    src: url("./Proxima Nova Regular.eot?#iefix") format("embedded-opentype"),
+        url("./Proxima Nova Regular.woff") format("woff"),
+        url("./Proxima Nova Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("./Proxima Nova Bold.eot");
+    src: local("☺️"), url("./Proxima Nova Bold.woff") format("woff"),
+        url("./Proxima Nova Bold.ttf") format("truetype"),
+        url("./Proxima Nova Bold.svg") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("./Proxima Nova Semibold.eot");
+    src: local("☺️"), url("./Proxima Nova Semibold.woff") format("woff"),
+        url("./Proxima Nova Semibold.ttf") format("truetype"),
+        url("./Proxima Nova Semibold.svg") format("svg");
+    font-weight: 600;
+    font-style: normal;
+}
+
+.custom-title {
+    text-align: center;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111010;
+}
+
+.ps{
+    position: absolute;
+    bottom: -30px;
+    height: 170px;
+}
+
+.custom__card__content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-price-item{
+    font-size: 12px !important;
+    font-family: 'Proxima Nova', sans-serif;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #cacaca !important;
+}
+
+.custom__card__heading {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    text-transform: capitalize;
+    color: #111010;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.custom__card__information{
+    text-align: center;
+}
