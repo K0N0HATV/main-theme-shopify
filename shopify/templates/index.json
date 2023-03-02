@@ -1,163 +1,35 @@
 {
+  "name": "Home-page",
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "someName": "some text test",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
+    "hero_bg": {
+      "type": "hero-bg"
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Tile Collection",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
+    "category_products": {
+      "type": "category-products"
     },
-    "12b72194-7c4e-4901-b785-f086522ec2fa": {
-      "type": "collage",
-      "blocks": {
-        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-0": {
-          "type": "image",
-          "settings": {
-          }
-        },
-        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-1": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-2": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-0",
-        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-1",
-        "template--17994937434406__12b72194-7c4e-4901-b785-f086522ec2fa-167718757476a85798-2"
-      ],
-      "settings": {
-        "heading": "Text Content",
-        "heading_size": "h0",
-        "desktop_layout": "right",
-        "mobile_layout": "column",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "background-2",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
+    "vision": {
+      "type": "vision"
     },
-    "0f822c13-56af-479c-b3d0-712a2c7386a9": {
-      "type": "rich-text",
-      "blocks": {
-        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Talk about your brand<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-0",
-        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-1",
-        "template--17994937434406__0f822c13-56af-479c-b3d0-712a2c7386a9-1677187632534d5836-2"
-      ],
-      "settings": {
-        "desktop_content_position": "right",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
+    "solutions": {
+      "type": "solutions"
+    },
+    "projects": {
+      "type": "projects"
+    },
+    "custom_collection": {
+      "type": "custom-collection"
+    },
+    "show_rooms": {
+      "type": "show-rooms"
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection",
-    "12b72194-7c4e-4901-b785-f086522ec2fa",
-    "0f822c13-56af-479c-b3d0-712a2c7386a9"
+    "hero_bg",
+    "category_products",
+    "vision",
+    "solutions",
+    "projects",
+    "custom_collection",
+    "show_rooms"
   ]
 }

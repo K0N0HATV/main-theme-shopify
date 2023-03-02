@@ -1,0 +1,43 @@
+.custom-title {
+    text-align: center;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111010;
+}
+
+.ps{
+    position: absolute;
+    bottom: -30px;
+    height: 170px;
+}
+
+.custom__card__content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-price-item{
+    font-size: 12px !important;
+    font-family: 'Proxima Nova', sans-serif;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #cacaca !important;
+}
+
+.custom__card__heading {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    text-transform: capitalize;
+    color: #111010;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+.custom__card__information{
+    text-align: center;
+}

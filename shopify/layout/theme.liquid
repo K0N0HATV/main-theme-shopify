@@ -34,6 +34,14 @@
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
     {{ content_for_header }}
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    >
+
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="{{ 'swiper.js' | asset_url }}"></script>
+
     {%- liquid
       assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
       assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
