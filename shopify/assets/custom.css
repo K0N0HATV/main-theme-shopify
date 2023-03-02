@@ -1271,6 +1271,422 @@ footer {
     color: #ffffff;
 }
 
+.catalog-bg {
+    background-image: url(https://cdn.shopify.com/s/files/1/0722/5180/1894/files/catalog-bg.jpg?v=1677694570);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.catalog-bg-eclipse {
+    background-color: rgba(37, 37, 37, 0.45);
+}
+
+.catalog {
+    padding: 50px 0 30px;
+    max-width: 357px;
+    margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+    .catalog {
+        padding: 100px 0 80px;
+        max-width: 457px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .catalog {
+        max-width: 657px;
+        padding: 227px 0 140px;
+        margin-bottom: 100px;
+    }
+}
+
+.catalog-head {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .catalog-head {
+        font-size: 52px;
+        line-height: 52px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .catalog-head {
+        font-size: 72px;
+        line-height: 72px;
+    }
+}
+
+.catalog .txt-20 {
+    color: #e4e4e4;
+}
+
+@media screen and (max-width: 768px) {
+    .catalog .txt-20 {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.rooms {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+@media screen and (min-width: 992px) {
+    .rooms {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+.rooms-card-black {
+    background-color: #252525;
+    padding: 48px 46px 94px 27px;
+    flex-direction: column;
+    margin: 0 20px 30px;
+}
+
+@media screen and (min-width: 992px) {
+    .rooms-card-black {
+        min-width: 329px;
+        flex-basis: 23.1%;
+        margin: 0;
+    }
+}
+
+.rooms-card-black .rooms-card-head {
+    margin-top: 14px;
+    margin-bottom: 24px;
+}
+
+.rooms-card-black span {
+    font-size: 15px;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.rooms-card-black .rooms-card-parag {
+    font-size: 18px;
+    line-height: 28px;
+    color: #bcbcbc;
+}
+
+.rooms-card {
+    position: relative;
+}
+
+.rooms-card-eclipce {
+    position: relative;
+}
+
+.rooms-card-eclipce:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, rgba(0, 0, 0, 0.65) -16.21%, rgba(196, 196, 196, 0) 118.83%);
+}
+
+.rooms-card span {
+    font-size: 15px;
+    line-height: 28px;
+    color: #ffffff;
+}
+
+.rooms-card-head {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 25px;
+    color: #ffffff;
+}
+
+.rooms-card-parag {
+    font-size: 18px;
+    line-height: 28px;
+    color: #bcbcbc;
+}
+
+.rooms-card-info {
+    position: absolute;
+    bottom: 20px;
+    left: 28px;
+}
+
+.room-card-img {
+    aspect-ratio: 1/1.2;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .filters {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .filters {
+        margin-top: 100px;
+        margin-bottom: 47px;
+    }
+}
+
+.filters-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.filters-filter {
+    margin-right: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.filters-btn-f {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+}
+
+.filters-btn-f span {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 28px;
+    color: #252525;
+}
+
+.filters-btn-f img {
+    width: 12px;
+    height: 10px;
+}
+
+.filters-btn-s {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.filters-btn-s span {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 28px;
+    color: #252525;
+}
+
+.filters-btn-s img {
+    width: 8px;
+    height: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .filters-search {
+        margin-right: 21px;
+    }
+}
+
+.filters-lines {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filters-showing {
+    font-size: 15px;
+    line-height: 28px;
+    color: #808080;
+}
+
+.banner {
+    width: 100%;
+    margin: 0 auto 100px;
+    position: relative;
+    overflow: hidden;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.08));
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.7) 100%, transparent 12%), url(https://cdn.shopify.com/s/files/1/0722/5180/1894/files/banner-bg.jpg?v=1677694570);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+@media screen and (min-width: 924px) {
+    .banner {
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0.9) 63.7%, transparent 12%), url(https://cdn.shopify.com/s/files/1/0722/5180/1894/files/banner-bg.jpg?v=1677694570);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .banner {
+        background: linear-gradient(120deg, rgba(255, 255, 255, 0.9) 43.7%, transparent 12%), url(https://cdn.shopify.com/s/files/1/0722/5180/1894/files/banner-bg.jpg?v=1677694570);
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+}
+
+.banner-text {
+    padding: 25px 22px;
+    max-width: 532px;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+@media screen and (min-width: 520px) {
+    .banner-text {
+        padding: 39px 32px;
+        text-align: start;
+    }
+}
+
+.banner-text h2 {
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 520px) {
+    .banner-text h2 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+}
+
+.banner-text p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #616161;
+}
+
+@media screen and (min-width: 520px) {
+    .banner-text p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+.banner-left {
+    width: 100%;
+    height: 115.4%;
+    position: absolute;
+    right: 30%;
+    top: 0;
+    z-index: 0;
+    transform: rotate(30deg) skew(0deg, -30deg);
+    transform-origin: top right;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.08));
+}
+
+@media screen and (min-width: 1300px) {
+    .banner-left {
+        right: 52.7%;
+    }
+}
+
+@media screen and (min-width: 924px) {
+    .banner-left {
+        background: #fff;
+    }
+}
+
+.breadcrumbs {
+    background-color: #222222;
+}
+
+.breadcrumbs-list {
+    padding: 40px 0 32px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.breadcrumbs-list-item {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs-list img {
+    width: 16px;
+    height: 20px;
+    transform: rotate(-90deg);
+    vertical-align: middle;
+    margin-left: 7px;
+}
+
+.breadcrumbs-list-item a {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+}
+
+.breadcrumbs-list-item.active {
+    padding-bottom: 6px;
+    border-bottom: 3px solid #C4C4C4;
+}
+
+.breadcrumbs-list-item:hover {
+    position: relative;
+    text-decoration: none;
+}
+
+.breadcrumbs-list-item:hover:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 5px solid #fff;
+    border-top-color: #C4C4C4;
+    transform: translate(-50%, -50%);
+    animation: breadcrumb-anim 0.4s ease-out forwards;
+}
+
+@keyframes breadcrumb-anim {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    to {
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+    }
+}
+
 @media screen and (min-width: 992px) {
     .d-flex {
         width: 100%;

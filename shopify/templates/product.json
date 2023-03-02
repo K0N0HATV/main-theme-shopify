@@ -74,8 +74,8 @@
         "padding_bottom": 12
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "breadcrumbs": {
+      "type": "breadcrumbs",
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -93,7 +93,7 @@
     }
   },
   "order": [
-    "main",
-    "related-products"
+    "breadcrumbs",
+    "main"
   ]
 }
