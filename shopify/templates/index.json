@@ -1,26 +1,39 @@
 {
-  "name": "Home-page",
   "sections": {
     "hero_bg": {
-      "type": "hero-bg"
+      "type": "hero-bg",
+      "settings": {
+      }
     },
     "category_products": {
-      "type": "category-products"
+      "type": "category-products",
+      "settings": {
+      }
     },
     "vision": {
-      "type": "vision"
+      "type": "vision",
+      "settings": {
+      }
     },
     "solutions": {
-      "type": "solutions"
+      "type": "solutions",
+      "settings": {
+      }
     },
     "projects": {
-      "type": "projects"
+      "type": "projects",
+      "settings": {
+      }
     },
     "custom_collection": {
-      "type": "custom-collection"
+      "type": "custom-collection",
+      "settings": {
+      }
     },
     "show_rooms": {
-      "type": "show-rooms"
+      "type": "show-rooms",
+      "settings": {
+      }
     }
   },
   "order": [
