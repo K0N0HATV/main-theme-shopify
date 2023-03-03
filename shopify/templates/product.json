@@ -78,10 +78,16 @@
       "type": "breadcrumbs",
       "settings": {
       }
+    },
+    "product": {
+      "type": "product",
+      "settings": {
+      }
     }
   },
   "order": [
     "breadcrumbs",
+    "product",
     "main"
   ]
 }
