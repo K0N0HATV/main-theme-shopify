@@ -2,11 +2,13 @@
   "sections": {
     "breadcrumbs": {
       "type": "breadcrumbs",
-      "settings": {}
+      "settings": {
+      }
     },
     "product": {
       "type": "product",
-      "settings": {}
+      "settings": {
+      }
     },
     "related-products": {
       "type": "relate-products",
@@ -17,9 +19,14 @@
     "viewed-products": {
       "type": "viewed-products",
       "settings": {
-        "category_top_left": "viewed"
+        "category_top_left": "related"
       }
     }
   },
-  "order": ["breadcrumbs", "product", "related-products", "viewed-products"]
+  "order": [
+    "breadcrumbs",
+    "product",
+    "related-products",
+    "viewed-products"
+  ]
 }
