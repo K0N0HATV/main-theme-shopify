@@ -7,15 +7,14 @@
     aria-label="breadcrumbs"
   >
     <div class="container">
-      <ol
-        class="breadcrumbs-list"
-      >
+      <ol class="breadcrumbs-list">
         <li class="breadcrumbs-list-item">
           <a class="breadcrumbs-list-link" href="/">Home</a>
+          <img src="https://cdn.shopify.com/s/files/1/0731/5197/1633/files/arrow.svg?v=1677878584" alt="">
         </li>
         {%- case t -%}
           {%- when 'page' -%}
-            <li class="breadcrumbs-list-item">
+            <li class="breadcrumbs-list-item active">
               <a
                 class="breadcrumbs-list-link"
                 href="{{ page.url }}"
@@ -26,11 +25,11 @@
             </li>
           {%- when 'product' -%}
             {%- if collection.url -%}
-              <li class="breadcrumbs-list-item">
+              <li class="breadcrumbs-list-item active">
                 {{ collection.title | link_to: collection.url }}
               </li>
             {%- endif -%}
-            <li class="breadcrumbs-list-item">
+            <li class="breadcrumbs-list-item active">
               <a
                 class="breadcrumbs-list-link"
                 href="{{ product.url }}"
@@ -41,10 +40,10 @@
             </li>
           {%- when 'collection' and collection.handle -%}
             {%- if current_tags -%}
-              <li class="breadcrumbs-list-item">
+              <li class="breadcrumbs-list-item active">
                 {{ collection.title | link_to: collection.url }}
               </li>
-              <li class="breadcrumbs-list-item">
+              <li class="breadcrumbs-list-item active">
                 {%- capture tag_url -%}
                 {{ collection.url }}/{{ current_tags | join: "+" }}{%- endcapture -%}
                 <a
@@ -56,7 +55,7 @@
                 </a>
               </li>
             {%- else -%}
-              <li class="breadcrumbs-list-item">
+              <li class="breadcrumbs-list-item active">
                 <a
                   class="breadcrumbs-list-link"
                   href="{{ collection.url }}"
@@ -68,10 +67,10 @@
             {%- endif -%}
           {%- when 'blog' -%}
             {%- if current_tags -%}
-              <li class="breadcrumbs-list-item">
+              <li class="breadcrumbs-list-item active">
                 {{ blog.title | link_to: blog.url }}
               </li>
-              <li class="breadcrumbs-list-item">
+              <li class="breadcrumbs-list-item active">
                 {%- capture tag_url -%}
                 {{ blog.url }}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
                 <a
@@ -83,7 +82,7 @@
                 </a>
               </li>
             {%- else -%}
-              <li class="breadcrumbs-list-item">
+              <li class="breadcrumbs-list-item active">
                 <a
                   class="breadcrumbs-list-link"
                   href="{{ blog.url }}"
@@ -94,10 +93,10 @@
               </li>
             {%- endif -%}
           {%- when 'article' -%}
-            <li class="breadcrumbs-list-item">
+            <li class="breadcrumbs-list-item active">
               {{ blog.title | link_to: blog.url }}
             </li>
-            <li class="breadcrumbs-list-item">
+            <li class="breadcrumbs-list-item active">
               <a
                 class="breadcrumbs-list-link"
                 href="{{ article.url }}"
@@ -107,7 +106,7 @@
               </a>
             </li>
           {%- else -%}
-            <li class="breadcrumbs-list-item">
+            <li class="breadcrumbs-list-item active">
               <a
                 class="breadcrumbs-list-link"
                 href="{{ request.path }}"
