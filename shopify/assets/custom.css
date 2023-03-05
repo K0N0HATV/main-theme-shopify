@@ -588,15 +588,14 @@ img {
 }
 
 .hero-bg {
-    background-image: url(https://cdn.shopify.com/s/files/1/0722/5180/1894/files/mob-main-bg.jpg?v=1677694570);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: -100px center;
     height: 434px;
 }
 
 @media screen and (min-width: 429px) {
     .hero-bg {
-        background-image: url(https://cdn.shopify.com/s/files/1/0722/5180/1894/files/main-bg.jpg?v=1677694570);
         height: 526px;
     }
 }
@@ -604,6 +603,7 @@ img {
 @media screen and (min-width: 992px) {
     .hero-bg {
         margin-bottom: 75px;
+        background-position: center center;
     }
 }
 
@@ -618,6 +618,7 @@ img {
     margin-bottom: -200px;
     margin-left: 20px;
     margin-right: 20px;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 992px) {
@@ -1040,6 +1041,10 @@ img {
 .breadcrumbs {
     background-color: #222222;
     margin-bottom: 50px;
+}
+
+.error {
+    color: red;
 }
 
 .breadcrumbs-list {

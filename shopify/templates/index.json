@@ -3,27 +3,27 @@
     "hero_bg": {
       "type": "hero-bg",
       "settings": {
+        "title_hero_bg": "New Generation Ceramic Tile",
+        "paragraph_hero_bg": "Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend aptent dapibus metus maecenas consequat. Elementum interdum a semper. Netus nullam eros nisi volutpat nibh ex ultricies. Pharetra sagittis sit aliquetat. Magna nam platea justo.",
+        "title_btn_hero_bg": "Learn more",
+        "hero_bg_bg_img": "shopify:\/\/shop_images\/main-bg.jpg"
       }
     },
     "category_products": {
       "type": "category-products",
-      "settings": {
-      }
+      "settings": {}
     },
     "vision": {
       "type": "vision",
-      "settings": {
-      }
+      "settings": {}
     },
     "solutions": {
       "type": "solutions",
-      "settings": {
-      }
+      "settings": {}
     },
     "projects": {
       "type": "projects",
-      "settings": {
-      }
+      "settings": {}
     },
     "custom_collection": {
       "type": "custom-collection",
@@ -33,8 +33,7 @@
     },
     "show_rooms": {
       "type": "show-rooms",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
