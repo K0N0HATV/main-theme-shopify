@@ -1,39 +1,66 @@
+{%- liquid
+  assign title_length = section.settings.title_hero_bg | size
+  assign paragraph_length = section.settings.paragraph_hero_bg | size
+  assign title_btn_length = section.settings.title_btn_hero_bg | size
+-%}
+
 <section class="hero-bg ">
   <div class="container relative jcc d-flex" style="height: 526px; justify-content:center;">
-    <div class="hero">
-      {%- liquid
-        assign title_length = section.settings.title_hero_bg | size
-        assign paragraph_length = section.settings.paragraph_hero_bg | size
-        assign title_btn_length = section.settings.title_btn_hero_bg | size
-      -%}
-      {% unless section.settings.title_hero_bg == blank %}
-        {% if title_length <= 27 %}
-          <h1 class="hero-head">{{ section.settings.title_hero_bg }}</h1>
-        {% else %}
-          {% render 'error', title_characters: 27 %}
-        {% endif %}
-      {% endunless %}
-      {% unless section.settings.paragraph_hero_bg == blank %}
-        {% if paragraph_length <= 242 %}
-          <p class="hero-parag">{{ section.settings.paragraph_hero_bg }}</p>
-        {% else %}
-          {% render 'error', title_characters: 242 %}
-        {% endif %}
-      {% endunless %}
-      {% unless section.settings.paragraph_hero_bg == blank %}
-        {% if title_btn_length <= 46 %}
-          <button class="button button-white" href="#">{{ section.settings.title_btn_hero_bg }}</button>
-        {% else %}
-          {% render 'error', title_characters: 46 %}
-        {% endif %}
-      {% endunless %}
-    </div>
+    {% unless section.settings.title_hero_bg == blank
+      and section.settings.paragraph_hero_bg == blank
+      and section.settings.paragraph_hero_bg == blank
+    %}
+      <div class="hero">
+        {% unless section.settings.title_hero_bg == blank %}
+          {% if title_length <= 27 %}
+            <h1 class="hero-head">{{ section.settings.title_hero_bg }}</h1>
+          {% else %}
+            {% render 'error', title_characters: 27 %}
+          {% endif %}
+        {% endunless %}
+        {% unless section.settings.paragraph_hero_bg == blank %}
+          {% if paragraph_length <= 242 %}
+            <p class="hero-parag">{{ section.settings.paragraph_hero_bg }}</p>
+          {% else %}
+            {% render 'error', title_characters: 242 %}
+          {% endif %}
+        {% endunless %}
+        {% unless section.settings.title_btn_hero_bg == blank %}
+          {% if title_btn_length <= 46 %}
+            <a
+              class="button button-white"
+              href="
+                {%- unless section.settings.link_collections_hero_bg == blank -%}
+                {{- section.settings.link_collections_hero_bg -}}
+                {%-  else -%}
+                #
+                {%- endunless -%}
+              "
+            >
+              {{- section.settings.title_btn_hero_bg -}}
+            </a>
+          {% else %}
+            {% render 'error', title_characters: 46 %}
+          {% endif %}
+        {% endunless %}
+      </div>
+    {% endunless %}
   </div>
 </section>
 
 {% style %}
   .hero-bg {
     background-image: url({{section.settings.hero_bg_bg_img|img_url:'1920x'}});
+  }
+
+  .hero {
+    background-color: {% render 'color_to_rgba', color: section.settings.hero_bg_color, alpha: '0.36' %};
+  }
+
+  @media screen and (max-width: 992px) {
+    .hero {
+      background-color: {{ section.settings.hero_bg_color }};
+    }
   }
 {% endstyle %}
 
@@ -60,6 +87,16 @@
       "type": "image_picker",
       "id": "hero_bg_bg_img",
       "label": "Upload background img"
+    },
+    {
+      "type": "color",
+      "id": "hero_bg_color",
+      "label": "Choose background color"
+    },
+    {
+      "type": "url",
+      "id": "link_collections_hero_bg",
+      "label": "Change Link"
     }
   ]
 }

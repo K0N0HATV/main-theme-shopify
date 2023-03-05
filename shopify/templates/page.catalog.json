@@ -3,6 +3,9 @@
     "catalog": {
       "type": "catalog",
       "settings": {
+        "title_catalog": "Catalog",
+        "paragraph_catalog": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+        "catalog_bg_img": "shopify://shop_images/catalog-bg.jpg"
       }
     },
     "rooms": {

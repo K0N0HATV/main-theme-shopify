@@ -129,6 +129,12 @@
     menuBtn.classList.toggle('active');
     body.classList.toggle('ohidden');
   });
+
+  window.addEventListener('resize', (e) => {
+    if (window.innerWidth > 992 && body.classList.contains('ohidden')) {
+      menuBtn.click();
+    }
+  });
 {% endjavascript %}
 
 {% schema %}

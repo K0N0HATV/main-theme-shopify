@@ -1,17 +1,115 @@
+{%- liquid
+  assign title_length = section.settings.title_custom_show_rooms | size
+  assign paragraph_length = section.settings.paragraph_custom_show_rooms | size
+  assign title_btn_length = section.settings.title_btn_custom_show_rooms | size
+-%}
+
 <section class="container">
   <div class="showrooms">
     <picture class="showrooms-img">
-      <img src="https://cdn.shopify.com/s/files/1/0722/5180/1894/files/showrooms.jpg?v=1677694570" alt="Showrooms">
+      <img
+        srcset="
+          {%- if section.settings.vision_bg_img.width >= 375 -%}
+            {{ section.settings.vision_bg_img | image_url: width: 350 }} 350w
+          {%- endif -%}
+          {%- if section.settings.bg_img_show_rooms.width >= 750 -%}
+            {{ section.settings.bg_img_show_rooms | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.bg_img_show_rooms.width >= 1100 -%}
+            {{ section.settings.bg_img_show_rooms | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.bg_img_show_rooms.width >= 1500 -%}
+            {{ section.settings.bg_img_show_rooms | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.bg_img_show_rooms.width >= 1780 -%}
+            {{ section.settings.bg_img_show_rooms | image_url: width: 1780 }} 1780w,{%- endif -%}
+          {%- if section.settings.bg_img_show_rooms.width >= 2000 -%}
+            {{ section.settings.bg_img_show_rooms | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {%- if section.settings.bg_img_show_rooms.width >= 3000 -%}
+            {{ section.settings.bg_img_show_rooms | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if section.settings.bg_img_show_rooms.width >= 3840 -%}
+            {{ section.settings.bg_img_show_rooms | image_url: width: 3840 }} 3840w,{%- endif -%}
+        "
+        src="{{section.settings.bg_img_show_rooms | img_url: width: 1900 }}"
+        alt="Showrooms"
+        loading="lazy"
+      >
     </picture>
-
-    <div class="showrooms-info">
-      <h1 class="h2">Our Showrooms</h1>
-      <p class="txt txt-20">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text.
-      </p>
-      <a class="button button-black" href="#">Learn more</a>
-    </div>
+    {% unless section.settings.title_custom_show_rooms == blank
+      and section.settings.paragraph_custom_show_rooms == blank
+      and section.settings.title_btn_custom_show_rooms == blank
+    %}
+      <div class="showrooms-info">
+        {% unless section.settings.title_custom_show_rooms == blank %}
+          {% if title_length <= 27 %}
+            <h1 class="h2">{{ section.settings.title_custom_show_rooms }}</h1>
+          {% else %}
+            {% render 'error', title_characters: 27 %}
+          {% endif %}
+        {% endunless %}
+        {% unless section.settings.paragraph_custom_show_rooms == blank %}
+          {% if paragraph_length <= 242 %}
+            <p class="txt txt-20">{{ section.settings.paragraph_custom_show_rooms }}</p>
+          {% else %}
+            {% render 'error', title_characters: 242 %}
+          {% endif %}
+        {% endunless %}
+        {% unless section.settings.title_btn_custom_show_rooms == blank %}
+          {% if title_btn_length <= 46 %}
+            <a
+              class="button button-black"
+              href="
+                {%- unless section.settings.link_collections_show_rooms == blank -%}
+                {{- section.settings.link_collections_show_rooms -}}
+                {%-  else -%}
+                #
+                {%- endunless -%}
+              "
+            >
+              {{- section.settings.title_btn_custom_show_rooms -}}
+            </a>
+          {% else %}
+            {% render 'error', title_characters: 46 %}
+          {% endif %}
+        {% endunless %}
+      </div>
+    {% endunless %}
   </div>
 </section>
 <div style="display: block;" class="showrooms-bg"></div>
+
+{% style %}
+  .showrooms-bg {
+    background-image: url({{section.settings.bg_img_show_rooms|img_url:'1300x'}});
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Show Rooms",
+  "settings": [
+    {
+      "type": "url",
+      "id": "link_collections_show_rooms",
+      "label": "Change Link"
+    },
+    {
+      "type": "text",
+      "id": "title_custom_show_rooms",
+      "label": "Enter title"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_custom_show_rooms",
+      "label": "Enter paragraph"
+    },
+    {
+      "type": "text",
+      "id": "title_btn_custom_show_rooms",
+      "label": "Enter title btn"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img_show_rooms",
+      "label": "Upload background img"
+    }
+  ]
+}
+{% endschema %}

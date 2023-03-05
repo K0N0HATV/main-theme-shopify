@@ -6,34 +6,66 @@
         "title_hero_bg": "New Generation Ceramic Tile",
         "paragraph_hero_bg": "Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend aptent dapibus metus maecenas consequat. Elementum interdum a semper. Netus nullam eros nisi volutpat nibh ex ultricies. Pharetra sagittis sit aliquetat. Magna nam platea justo.",
         "title_btn_hero_bg": "Learn more",
-        "hero_bg_bg_img": "shopify:\/\/shop_images\/main-bg.jpg"
+        "hero_bg_bg_img": "shopify://shop_images/main-bg.jpg",
+        "hero_bg_color": "#666a6f",
+        "link_collections_hero_bg": "/collections"
       }
     },
     "category_products": {
       "type": "category-products",
-      "settings": {}
+      "settings": {
+        "title_category_products": "Products",
+        "paragraph_category_products": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text."
+      }
     },
     "vision": {
       "type": "vision",
-      "settings": {}
+      "settings": {
+        "title_vision": "Vision",
+        "paragraph_vision": "Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend aptent dapibus metus maecenas consequat. Elementum interdum a semper. Netus nullam eros nisi volutpat nibh ex ultricies. Pharetra sagittis sit aliquet at. Magna nam platea justo.",
+        "title_btn_vision": "Learn more",
+        "vision_bg_img": "shopify://shop_images/vision.jpg",
+        "vision_bg_color": "#f7f7f7",
+        "link_collections_vision": "/collections"
+      }
     },
     "solutions": {
       "type": "solutions",
-      "settings": {}
+      "settings": {
+        "title_solutions": "Creative Solutions by Professional Designers",
+        "paragraph_solutionsg": " Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend aptent dapibus metus maecenas consequat. Elementum interdum a semper. Netus nullam eros nisi volutpat nibh ex ultricies. Pharetra sagittis sit aliquet at. Magna nam platea justo.",
+        "title_btn_solutions": "Read more",
+        "link_collections_solutions": "/collections"
+      }
     },
     "projects": {
       "type": "projects",
-      "settings": {}
+      "settings": {
+        "link_collections_projects": "/collections",
+        "title_projects": "Projects",
+        "paragraph_projects": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+        "title_btn_projects": "View all"
+      }
     },
     "custom_collection": {
       "type": "custom-collection",
       "settings": {
-        "category_top_left": "all"
+        "category_top_left": "all",
+        "link_collections_custom_collection": "/collections/all",
+        "title_custom_collection": "Tile Collections",
+        "paragraph_custom_collection": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+        "title_btn_custom_collection": "More products"
       }
     },
     "show_rooms": {
       "type": "show-rooms",
-      "settings": {}
+      "settings": {
+        "link_collections_show_rooms": "/collections",
+        "title_custom_show_rooms": "Our Showrooms",
+        "paragraph_custom_show_rooms": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+        "title_btn_custom_show_rooms": "Learn more",
+        "bg_img_show_rooms": "shopify://shop_images/showrooms.jpg"
+      }
     }
   },
   "order": [

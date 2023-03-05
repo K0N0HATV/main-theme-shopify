@@ -2,12 +2,13 @@
   <div class="container">
     <div class="d-flex flex-column gap-0 marg-b">
       <div class="projects">
-        <h2 class="h2">Projects</h2>
-        <hr>
-        <p class="txt txt-15">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text.
-        </p>
+        {% unless section.settings.title_projects == blank %}
+          <h2 class="h2">{{ section.settings.title_projects }}</h2>
+          <hr>
+        {% endunless %}
+        {% unless section.settings.paragraph_projects == blank %}
+          <p class="txt txt-15">{{ section.settings.paragraph_projects }}</p>
+        {% endunless %}
       </div>
       <div class="project-cards d-flex e--dsk">
         <div class="project-cards-item">
@@ -145,7 +146,48 @@
           aria-atomic="true"
         ></span>
       </div>
-      <button class="button button-black button-big">View all</button>
+      {% unless section.settings.title_btn_projects == blank %}
+        <a
+          class="button button-black button-big"
+          href="
+            {%- unless section.settings.link_collections_projects == blank -%}
+            {{- section.settings.link_collections_projects -}}
+            {%-  else -%}
+            #
+            {%- endunless -%}
+          "
+        >
+          {{- section.settings.title_btn_projects -}}
+        </a>
+      {% endunless %}
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Projects",
+  "settings": [
+    {
+      "type": "url",
+      "id": "link_collections_projects",
+      "label": "Change Link"
+    },
+    {
+      "type": "text",
+      "id": "title_projects",
+      "label": "Enter title"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_projects",
+      "label": "Enter paragraph"
+    },
+    {
+      "type": "text",
+      "id": "title_btn_projects",
+      "label": "Enter title btn"
+    }
+  ]
+}
+{% endschema %}

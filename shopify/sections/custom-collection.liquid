@@ -2,21 +2,37 @@
   <div class="container">
     <div class="collections d-flex flex-column marg-b">
       {% if page.title != 'Catalog' %}
-        <h2 class="h2">Tile Collections</h2>
-        <hr>
-        <p class="txt txt-15">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text.
-        </p>
+        {% unless section.settings.title_custom_collection == blank
+          and section.settings.paragraph_custom_collection == blank
+        %}
+          {% unless section.settings.title_custom_collection == blank %}
+            <h2 class="h2">{{ section.settings.title_custom_collection }}</h2>
+            <hr>
+          {% endunless %}
+          {% unless section.settings.paragraph_custom_collection == blank %}
+            <p class="txt txt-15">{{ section.settings.paragraph_custom_collection }}</p>
+          {% endunless %}
+        {% endunless %}
       {% endif %}
-
       <div class="collections-cards">
         {%- for product in section.settings.category_top_left.products -%}
           {% render 'custom-card-product', card_product: product %}
         {% endfor %}
       </div>
-
-      <button class="button button-black">more products</button>
+      {% unless section.settings.title_custom_collection == blank %}
+        <a
+          class="button button-black"
+          href="
+            {%- unless section.settings.link_collections_custom_collection == blank -%}
+            {{- section.settings.link_collections_custom_collection -}}
+            {%-  else -%}
+            #
+            {%- endunless -%}
+          "
+        >
+          {{- section.settings.title_custom_collection -}}
+        </a>
+      {% endunless %}
     </div>
   </div>
 </section>
@@ -29,6 +45,26 @@
       "type": "collection",
       "id": "category_top_left",
       "label": "Category Top Left"
+    },
+    {
+      "type": "url",
+      "id": "link_collections_custom_collection",
+      "label": "Change Link"
+    },
+    {
+      "type": "text",
+      "id": "title_custom_collection",
+      "label": "Enter title"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_custom_collection",
+      "label": "Enter paragraph"
+    },
+    {
+      "type": "text",
+      "id": "title_btn_custom_collection",
+      "label": "Enter title btn"
     }
   ]
 }

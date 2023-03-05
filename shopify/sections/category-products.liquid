@@ -1,12 +1,13 @@
 <section class="marg-b">
   <div class="container">
     <div class="products">
-      <h2 class="h2">Products</h2>
-      <hr>
-      <p class="txt txt-15 products-parag">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text.
-      </p>
+      {% unless section.settings.title_category_products == blank %}
+        <h2 class="h2">{{ section.settings.title_category_products }}</h2>
+        <hr>
+      {% endunless %}
+      {% unless section.settings.paragraph_category_products == blank %}
+        <p class="txt txt-15 products-parag">{{ section.settings.paragraph_category_products }}</p>
+      {% endunless %}
     </div>
     <div
       class="swiper mySwiper1 swiper-initialized swiper-horizontal swiper-css-mode e--mob"
@@ -188,3 +189,21 @@
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Category Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_category_products",
+      "label": "Enter title"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_category_products",
+      "label": "Enter paragraph"
+    }
+  ]
+}
+{% endschema %}

@@ -1,13 +1,58 @@
+{%- liquid
+  assign title_length = section.settings.title_catalog | size
+  assign paragraph_length = section.settings.paragraph_hero_bg | size
+-%}
+
 <section class="catalog-bg">
   <div class="catalog-bg-eclipse">
     <div class="container">
-      <div class="catalog">
-        <h1 class="catalog-head">Catalog</h1>
-        <p class="txt-20">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text.
-        </p>
-      </div>
+      {% unless section.settings.title_catalog == blank and section.settings.paragraph_catalog == blank %}
+        <div class="catalog">
+          {% unless section.settings.title_catalog == blank %}
+            {% if title_length <= 27 %}
+              <h1 class="catalog-head">{{ section.settings.title_catalog }}</h1>
+            {% else %}
+              {% render 'error', title_characters: 27 %}
+            {% endif %}
+          {% endunless %}
+          {% unless section.settings.paragraph_catalog == blank %}
+            {% if paragraph_length <= 242 %}
+              <p class="txt-20">{{ section.settings.paragraph_catalog }}</p>
+            {% else %}
+              {% render 'error', title_characters: 242 %}
+            {% endif %}
+          {% endunless %}
+        </div>
+      {% endunless %}
     </div>
   </div>
 </section>
+
+{% style %}
+  .catalog-bg {
+    background-image: url({{section.settings.catalog_bg_img|img_url:'1200x'}});
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Catalog",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_catalog",
+      "label": "Enter title"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph_catalog",
+      "label": "Enter paragraph"
+    },
+    {
+      "type": "image_picker",
+      "id": "catalog_bg_img",
+      "label": "Upload background img"
+    }
+  ]
+}
+{% endschema %}
