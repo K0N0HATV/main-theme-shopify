@@ -1038,6 +1038,27 @@ img {
     }
 }
 
+.breadcrumbs {
+    background-color: #222222;
+    margin-bottom: 50px;
+}
+
+.breadcrumbs-list {
+    padding: 40px 0;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    list-style-type: none;
+}
+
+.breadcrumbs-list img {
+    width: 16px;
+    height: 20px;
+    transform: rotate(-90deg);
+    vertical-align: middle;
+    margin-left: 7px;
+}
+
 @media screen and (max-width: 400px) {
     .breadcrumbs-list img {
         width: 13px;
@@ -1046,9 +1067,15 @@ img {
 }
 
 .breadcrumbs-list-item {
-    display: flex;
-    align-items: center;
+    position: relative;
     transition: all .3s ease-in-out;
+}
+
+.breadcrumbs-list-item a {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    margin-right: 25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1065,14 +1092,32 @@ img {
     }
 }
 
-.breadcrumbs-list-item:hover {
-    position: relative;
-    text-decoration: none;
+.breadcrumbs-list-item.active a {
+    padding-bottom: 6px;
+    border-bottom: 3px solid #C4C4C4;
 }
 
 .breadcrumbs-list-item:hover {
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.breadcrumbs-list-item:hover a {
     padding-bottom: 6px;
     border-bottom: 3px solid #C4C4C4;
+}
+
+.breadcrumbs-list-item:hover::after {
+    margin-left: -3px;
+}
+
+.breadcrumbs-list-item:not(:last-child)::after {
+    content: url(https://cdn.shopify.com/s/files/1/0731/5197/1633/files/arrow.svg?v=1677878584);
+    display: inline-block;
+    transform: rotateZ(-90deg);
+    position: absolute;
+    top: 8px;
+    right: 0;
 }
 
 .video-block-content {
@@ -1452,15 +1497,22 @@ footer {
     }
 }
 
+.footer-links {
+    margin: 34px 0 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 .footer-nav-head {
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
     text-transform: capitalize;
     color: #ffffff;
-    background-image: url(https://cdn.shopify.com/s/files/1/0722/5180/1894/files/arrow.svg?v=1677694570);
-    background-repeat: no-repeat;
-    background-position: center right;
+    width: 100%;
+    text-align: left;
 }
 
 @media screen and (min-width: 992px) {
@@ -1928,12 +1980,6 @@ footer {
     color: #ffffff;
 }
 
-.breadcrumbs-list-item.active {
-    padding-bottom: 6px;
-    border-bottom: 3px solid #C4C4C4;
-}
-
-
 .main-image {
     width: 100%;
     transition: all .3s ease-in-out;
@@ -2089,6 +2135,87 @@ footer {
     }
 }
 
+.filters-lines button:hover {
+    filter: opacity(0.5);
+    transition: all .2s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+    .filters-search {
+        margin-right: 21px;
+        transition: all .2s ease-in-out;
+    }
+
+    .filters-search:hover {
+        filter: opacity(0.5);
+    }
+}
+
+.filters-btn-s {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: all .2s ease-in-out;
+}
+
+.filters-btn-s:hover {
+    filter: opacity(0.5);
+}
+
+.filters-btn-f {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    transition: all .2s ease-in-out;
+}
+
+.filters-btn-f:hover {
+    filter: opacity(0.5);
+}
+
+.header-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all .2s ease-in-out;
+}
+
+.header-icon:hover {
+    filter: opacity(0.5);
+}
+
+.collections-card-img {
+    margin: 12px 0 16px;
+    transition: all .3s ease-in-out;
+}
+
+.collections-card-img:hover {
+    scale: 1.05;
+}
+
+@media screen and (min-width: 992px) {
+    .footer-nav {
+        padding: 0;
+        flex-direction: row;
+        gap: 80px;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header-icon:hover {
+        filter: opacity(0.5);
+    }
+}
+
+.footer-links a:hover {
+    filter: opacity(0.8);
+}
+
 .e--dsk {
     display: none;
 }
@@ -2105,6 +2232,18 @@ footer {
 
 @media screen and (min-width: 992px) {
     .e--mob {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .dsk-none {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .mob-none {
         display: none;
     }
 }

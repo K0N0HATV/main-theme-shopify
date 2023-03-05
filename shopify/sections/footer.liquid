@@ -8,11 +8,76 @@
             alt="logo"
           >
         </picture>
-
-        <ul class="footer-nav">
+        <ul class="footer-nav dsk-none">
+          <li class="footer-nav-li">
+            <div class="dropdown">
+              <button class="footer-nav-head footer-mob-button">
+                Products
+                <img
+                  class="footer-arrow"
+                  src="https://cdn.shopify.com/s/files/1/0726/7631/1323/files/arrow.svg?v=1677694745"
+                  alt="arrow"
+                  width="19"
+                  height="11"
+                  loading="lazy"
+                >
+              </button>
+              <ul class="footer-nav-links-mob footer-nav-links">
+                {% for link in section.settings.footer_menu.links limit: 4 %}
+                  <li>
+                    <a class="footer-nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+          <li class="footer-nav-li">
+            <div class="dropdown">
+              <button class="footer-nav-head footer-mob-button">
+                Services
+                <img
+                  class="footer-arrow"
+                  src="https://cdn.shopify.com/s/files/1/0726/7631/1323/files/arrow.svg?v=1677694745"
+                  alt="arrow"
+                  width="19"
+                  height="11"
+                  loading="lazy"
+                >
+              </button>
+              <ul class="footer-nav-links footer-nav-links-mob">
+                {% for link in section.settings.footer_menu.links offset: 4 %}
+                  <li>
+                    <a class="footer-nav-link" href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+          <li class="footer-nav-li">
+            <div class="dropdown">
+              <button class="footer-nav-head footer-mob-button">
+                Contact information
+                <img
+                  class="footer-arrow"
+                  src="https://cdn.shopify.com/s/files/1/0726/7631/1323/files/arrow.svg?v=1677694745"
+                  alt="arrow"
+                  width="19"
+                  height="11"
+                  loading="lazy"
+                >
+              </button>
+              <ul class="footer-nav-links footer-nav-links-mob">
+                <li class="footer-nav-contact">3181 Al Imam Saud Ibn Abdul Aziz Branch Rd,</li>
+                <li class="footer-nav-contact">An Nuzhah, Riyadh 12474,</li>
+                <li class="footer-nav-contact">Saudi Arabia</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul class="footer-nav mob-none">
           <li>
             <p class="footer-nav-head">Products</p>
-            <ul class="e--dsk footer-nav-links">
+            <ul class="footer-nav-links">
               {% for link in section.settings.footer_menu.links limit: 4 %}
                 <li>
                   <a class="footer-nav-link" href="{{ link.url }}">{{ link.title }}</a>
@@ -32,7 +97,7 @@
           </li>
           <li>
             <p class="footer-nav-head">Contact information</p>
-            <ul class="e--dsk footer-nav-links">
+            <ul class="footer-nav-links">
               <li class="footer-nav-contact">3181 Al Imam Saud Ibn Abdul Aziz Branch Rd,</li>
               <li class="footer-nav-contact">An Nuzhah, Riyadh 12474,</li>
               <li class="footer-nav-contact">Saudi Arabia</li>
@@ -77,6 +142,65 @@
     </div>
   </div>
 </footer>
+
+{% javascript %}
+  const footerBtn = document.querySelectorAll('.footer-mob-button');
+
+  if (footerBtn) {
+    footerBtn.forEach((btn) => {
+      btn.parentElement.addEventListener('click', (e) => {
+        if (e.target.classList.contains('footer-mob-button')) {
+          e.target.querySelector('.footer-arrow').classList.toggle('rotate-arrow');
+          e.target.classList.toggle('active');
+        } else if (e.target.classList.contains('footer-arrow')) {
+          e.target.parentElement.querySelector('.footer-arrow').classList.toggle('rotate-arrow');
+          e.target.parentElement.classList.toggle('active');
+        }
+      });
+    });
+  }
+{% endjavascript %}
+
+<style>
+  .footer-arrow {
+    max-width: 19px;
+    transition: 0.3s all;
+  }
+
+  .footer-nav-links-mob {
+    max-height: 0;
+    transition: 0.6s all;
+  }
+  @media screen and (min-width: 992px) {
+    .footer-nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .dropdown .active + .footer-nav-links-mob {
+    max-height: 400px;
+    visibility: visible;
+    transition: 0.6s all;
+    margin-top: 15px;
+  }
+
+  .dropdown {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .rotate-arrow {
+    transform: rotateZ(90deg);
+    transition: 0.3s all;
+  }
+  .footer-mob-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>
 
 {% schema %}
 {
