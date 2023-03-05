@@ -9,11 +9,30 @@
         </div>
       </button>
       <img
+        srcset="
+          {%- if section.settings.header_logo_img.width >= 375 -%}
+            {{ section.settings.header_logo_img | image_url: width: 375 }} 375
+          {%- endif -%}
+          {%- if section.settings.header_logo_img.width >= 750 -%}
+            {{ section.settings.header_logo_img | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.header_logo_img.width >= 1100 -%}
+            {{ section.settings.header_logo_img | image_url: width: 1100 }} 1100w,{%- endif -%}
+          {%- if section.settings.header_logo_img.width >= 1500 -%}
+            {{ section.settings.header_logo_img | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.header_logo_img.width >= 1780 -%}
+            {{ section.settings.header_logo_img | image_url: width: 1780 }} 1780w,{%- endif -%}
+          {%- if section.settings.header_logo_img.width >= 2000 -%}
+            {{ section.settings.header_logo_img | image_url: width: 2000 }} 2000w,{%- endif -%}
+          {%- if section.settings.header_logo_img.width >= 3000 -%}
+            {{ section.settings.header_logo_img | image_url: width: 3000 }} 3000w,{%- endif -%}
+          {%- if section.settings.header_logo_img.width >= 3840 -%}
+            {{ section.settings.header_logo_img | image_url: width: 3840 }} 3840w,{%- endif -%}
+          {{ section.settings.header_logo_img | image_url }} {{ section.settings.header_logo_img.width }}
+        "
         class="header-logo"
-        src="https://cdn.shopify.com/s/files/1/0726/7631/1323/files/logo.svg?v=1677694745"
+        src="{{section.settings.header_logo_img | img_url: width: 300 }}"
         alt="Logo"
-        width="101"
-        height="36"
+        loading="lazy"
       >
       <div class="d-flex">
         <button class="header-icon e--dsk">
@@ -22,6 +41,7 @@
             alt="Search"
             width="17"
             height="17"
+            loading="lazy"
           >
         </button>
         <div class="menu-burger">
@@ -72,6 +92,7 @@
               alt="Cart"
               width="21"
               height="20"
+              loading="lazy"
             >
           </button>
           <button class="header-icon e--dsk">
@@ -80,6 +101,7 @@
               alt="Search"
               width="20"
               height="18"
+              loading="lazy"
             >
           </button>
           <button class="header-icon e--dsk">
@@ -88,6 +110,7 @@
               alt="Search"
               width="15"
               height="18"
+              loading="lazy"
             >
           </button>
         </div>

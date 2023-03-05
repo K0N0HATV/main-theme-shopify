@@ -2183,10 +2183,6 @@ footer {
     transition: all .2s ease-in-out;
 }
 
-.header-icon:hover {
-    filter: opacity(0.5);
-}
-
 .collections-card-img {
     margin: 12px 0 16px;
     transition: all .3s ease-in-out;
