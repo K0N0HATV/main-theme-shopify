@@ -7,6 +7,7 @@
         "paragraph_hero_bg": "Penatibus sem vitae mollis luctus mi tellus. Maximus eu eleifend aptent dapibus metus maecenas consequat. Elementum interdum a semper. Netus nullam eros nisi volutpat nibh ex ultricies. Pharetra sagittis sit aliquetat. Magna nam platea justo.",
         "title_btn_hero_bg": "Learn more",
         "hero_bg_bg_img": "shopify://shop_images/main-bg.jpg",
+        "hero_mob_bg_img": "shopify://shop_images/mob-main-bg.jpg",
         "hero_bg_color": "#666a6f",
         "link_collections_hero_bg": "/collections"
       }

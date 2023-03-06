@@ -6,7 +6,8 @@
       "type": "footer",
       "settings": {
         "footer_menu_products": "products",
-        "footer_menu_services": "services"
+        "footer_menu_services": "services",
+        "footer_logo": "shopify://shop_images/logo-white.svg"
       }
     }
   },

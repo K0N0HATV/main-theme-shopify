@@ -590,7 +590,6 @@ img {
 .hero-bg {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: -100px center;
     height: 434px;
 }
 
@@ -603,7 +602,6 @@ img {
 @media screen and (min-width: 992px) {
     .hero-bg {
         margin-bottom: 75px;
-        background-position: center center;
     }
 }
 
@@ -1473,16 +1471,16 @@ footer {
 
 .footer-logo {
     display: block;
-    width: 122px;
-    height: 43px;
+    max-width: 122px;
+    max-height: 43px;
     margin: 0 auto 38px;
 }
 
 @media screen and (min-width: 992px) {
     .footer-logo {
         margin: 0;
-        width: 162px;
-        height: 57px;
+        max-width: 162px;
+        max-height: 57px;
     }
 }
 
@@ -2217,6 +2215,10 @@ footer {
         gap: 80px;
         border: none;
     }
+}
+
+.footer-logo{
+
 }
 
 @media screen and (min-width: 992px) {

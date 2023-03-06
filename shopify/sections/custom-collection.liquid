@@ -19,7 +19,7 @@
           {% render 'custom-card-product', card_product: product %}
         {% endfor %}
       </div>
-      {% unless section.settings.title_custom_collection == blank %}
+      {% unless section.settings.title_btn_custom_collection == blank %}
         <a
           class="button button-black"
           href="
@@ -30,7 +30,7 @@
             {%- endunless -%}
           "
         >
-          {{- section.settings.title_custom_collection -}}
+          {{- section.settings.title_btn_custom_collection -}}
         </a>
       {% endunless %}
     </div>

@@ -50,7 +50,13 @@
 
 {% style %}
   .hero-bg {
-    background-image: url({{section.settings.hero_bg_bg_img|img_url:'1920x'}});
+    background-image: url('{{ section.settings.hero_mob_bg_img | img_url: '428x437'}}');
+  }
+
+  @media screen and (min-width: 429px) {
+    .hero-bg {
+      background-image: url('{{ section.settings.hero_bg_bg_img | img_url: '1920x'}}');
+    }
   }
 
   .hero {
@@ -86,7 +92,12 @@
     {
       "type": "image_picker",
       "id": "hero_bg_bg_img",
-      "label": "Upload background img"
+      "label": "Change background image for desktop version of site"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_mob_bg_img",
+      "label": "Change background image for mobile version of site"
     },
     {
       "type": "color",
