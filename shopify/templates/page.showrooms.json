@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "69591a14-40c4-4bf8-97d7-87abab381f4e": {
+      "type": "new-section",
+      "blocks": {
+        "52af88e8-ae71-4b38-87bc-6572b3027ea9": {
+          "type": "labelText",
+          "settings": {
+            "textId": "Showrooms"
+          }
+        },
+        "2a806adf-2bab-43c5-a84e-fd738ba5cd1d": {
+          "type": "labelText",
+          "settings": {
+            "textId": "Showrooms"
+          }
+        },
+        "2fb83f3e-45fa-42ea-92a8-bbd1d58a248f": {
+          "type": "labelText",
+          "settings": {
+            "textId": "Showrooms"
+          }
+        }
+      },
+      "block_order": [
+        "52af88e8-ae71-4b38-87bc-6572b3027ea9",
+        "2a806adf-2bab-43c5-a84e-fd738ba5cd1d",
+        "2fb83f3e-45fa-42ea-92a8-bbd1d58a248f"
+      ],
+      "settings": {
+        "favouriteColor": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "69591a14-40c4-4bf8-97d7-87abab381f4e"
+  ]
+}
