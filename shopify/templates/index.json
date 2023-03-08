@@ -1,5 +1,8 @@
 {
   "sections": {
+    "best_way": {
+      "type": "best-way"
+    },
     "hero_bg": {
       "type": "hero-bg",
       "settings": {
@@ -70,6 +73,7 @@
     }
   },
   "order": [
+    "best_way",
     "hero_bg",
     "category_products",
     "vision",

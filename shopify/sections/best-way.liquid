@@ -1,0 +1,186 @@
+<section>
+  <div class="{% unless section.settings.checkbox_section_stretch %} section-container {% endunless %}">
+    <div class="display-flex ai-normal">
+      <div class="description--stretch">
+        <div class="tal {% if section.settings.checkbox_section_stretch %} description__best_way {% endif %}">
+          <h3 class="h3 marg-b-25">The best way to restore beauty, youth, health and strength</h3>
+          <p class="txt marg-b-25">
+            Dermacolla - the premium brand in German vitamins. They are aimed at preserving and restoring natural
+            beauty, moisturizing the skin, accelerating hair growth and strengthening nails, delivering vital moisture
+            to the tissues, and aiding the process that leads to the reduction of cellulite.
+          </p>
+          <a class="btn--small" href="">About dermacolla</a>
+        </div>
+      </div>
+      <div class="video-wrap--default {% if section.settings.checkbox_section_stretch %} video-wrap {% endif %}">
+        <video
+          class="{% if section.settings.checkbox_section_stretch %} video {% endif %}"
+          loop=""
+          autoplay=""
+          muted=""
+          id="vid"
+        >
+          <source
+            src="https://cdn.shopify.com/s/files/1/0613/5654/0062/files/dermacolla_video_1080.mp4?v=1652206982"
+            type="video/mp4"
+          >
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  video {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 2379px) {
+    .video {
+      margin-top: -5vw;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .wrap {
+      flex-direction: column;
+    }
+  }
+
+  .video-wrap {
+    max-height: 600px;
+    overflow: hidden;
+  }
+
+  .video-wrap--default {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+  }
+
+  .d-inline-b {
+    display: inline-block;
+  }
+
+  .section-container {
+    padding: 0 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .tal {
+    text-align: left;
+  }
+
+  .tar {
+    text-align: right;
+  }
+
+  .marg-b-25 {
+    margin-bottom: 25px;
+  }
+
+  .display-flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .fd-column {
+    flex-direction: column;
+  }
+
+  .txt {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+  }
+
+  @media screen and (min-width: 992px) {
+    .txt {
+      line-height: 25px;
+    }
+  }
+
+  .btn--small {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    line-height: 17px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn--small:hover {
+    text-decoration: none;
+  }
+
+  .description__best_way {
+    max-width: 700px;
+    margin-left: auto;
+  }
+
+  @media screen and (max-width: 992px) {
+    .description__best_way {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  .ai-normal {
+    align-items: normal;
+  }
+
+  .description--stretch {
+    width: 100%;
+    flex-basis: 50%;
+    background-color: #ff0000;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .description--stretch {
+      justify-content: center;
+    }
+  }
+
+  .h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    .h3 {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .h3 {
+      font-size: 25px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .h3 {
+      font-size: 42px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "best_way",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "checkbox_section_stretch",
+      "label": "Stretch the section to full screen"
+    }
+  ]
+}
+{% endschema %}
