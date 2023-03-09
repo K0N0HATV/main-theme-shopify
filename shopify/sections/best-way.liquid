@@ -1,20 +1,24 @@
 <section>
   <div class="{% unless section.settings.checkbox_section_stretch %} section-container {% endunless %}">
-    <div class="display-flex ai-normal">
-      <div class="description--stretch">
-        <div class="tal {% if section.settings.checkbox_section_stretch %} description__best_way {% endif %}">
-          <h3 class="h3 marg-b-25">The best way to restore beauty, youth, health and strength</h3>
-          <p class="txt marg-b-25">
+    <div class="d-flex--default wrap {% if section.settings.checkbox_section_exchange %} d-flex--revert {% endif %}">
+      <div class="description--default {% if section.settings.checkbox_section_stretch %} description--stretch {% endif %}">
+        <div class="tal description__best_way {% if section.settings.checkbox_section_exchange -%} tar description__best_way--exchange {%- endif %}">
+          <h3 class="h3 marg-b-25 {% if section.settings.checkbox_section_stretch %} color-white-stretch {% endif %}">
+            The best way to restore beauty, youth, health and strength
+          </h3>
+          <p class="text marg-b-25 {% if section.settings.checkbox_section_stretch %}color-white-stretch{% endif %}">
             Dermacolla - the premium brand in German vitamins. They are aimed at preserving and restoring natural
             beauty, moisturizing the skin, accelerating hair growth and strengthening nails, delivering vital moisture
             to the tissues, and aiding the process that leads to the reduction of cellulite.
           </p>
-          <a class="btn--small" href="">About dermacolla</a>
+          <a class="btn--small {% if section.settings.checkbox_section_stretch %}color-white-stretch{% endif %}" href=""
+            >About dermacolla</a
+          >
         </div>
       </div>
-      <div class="video-wrap--default {% if section.settings.checkbox_section_stretch %} video-wrap {% endif %}">
+      <div class="video-wrap--default">
         <video
-          class="{% if section.settings.checkbox_section_stretch %} video {% endif %}"
+          class="video--default {% if section.settings.checkbox_section_stretch %}video--stretch{% endif %}"
           loop=""
           autoplay=""
           muted=""
@@ -31,14 +35,12 @@
 </section>
 
 <style>
-  video {
-    width: 100%;
+  .d-flex--default {
+    display: flex;
   }
 
-  @media screen and (min-width: 2379px) {
-    .video {
-      margin-top: -5vw;
-    }
+  .d-flex--revert {
+    flex-direction: row-reverse;
   }
 
   @media screen and (max-width: 992px) {
@@ -47,72 +49,29 @@
     }
   }
 
-  .video-wrap {
-    max-height: 600px;
-    overflow: hidden;
-  }
-
-  .video-wrap--default {
+  .description--default {
+    width: 100%;
     flex-basis: 50%;
     display: flex;
     align-items: center;
+    padding: 20px;
   }
 
-  .d-inline-b {
-    display: inline-block;
+  @media screen and (max-width: 992px) {
+    .description--default {
+      justify-content: center;
+    }
   }
 
-  .section-container {
-    padding: 0 20px;
-    max-width: 1500px;
-    margin: 0 auto;
+  .description--stretch {
+    background-color: #111010;
   }
 
   .tal {
     text-align: left;
   }
-
   .tar {
     text-align: right;
-  }
-
-  .marg-b-25 {
-    margin-bottom: 25px;
-  }
-
-  .display-flex {
-    display: flex;
-    align-items: center;
-  }
-
-  .fd-column {
-    flex-direction: column;
-  }
-
-  .txt {
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    line-height: 20px;
-  }
-
-  @media screen and (min-width: 992px) {
-    .txt {
-      line-height: 25px;
-    }
-  }
-
-  .btn--small {
-    font-size: 12px;
-    letter-spacing: 1.2px;
-    line-height: 17px;
-    color: #000000;
-    text-transform: uppercase;
-    text-decoration: underline;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .btn--small:hover {
-    text-decoration: none;
   }
 
   .description__best_way {
@@ -127,23 +86,9 @@
     }
   }
 
-  .ai-normal {
-    align-items: normal;
-  }
-
-  .description--stretch {
-    width: 100%;
-    flex-basis: 50%;
-    background-color: #ff0000;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-  }
-
-  @media screen and (max-width: 992px) {
-    .description--stretch {
-      justify-content: center;
-    }
+  .description__best_way--exchange {
+    margin-right: auto;
+    margin-left: 0;
   }
 
   .h3 {
@@ -170,6 +115,68 @@
       font-size: 42px;
     }
   }
+
+  .text {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+  }
+
+  @media screen and (min-width: 992px) {
+    .text {
+      line-height: 25px;
+    }
+  }
+
+  .btn--small {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    line-height: 17px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn--small:hover {
+    text-decoration: none;
+  }
+
+  .video-wrap--default {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    max-height: 600px;
+    overflow: hidden;
+  }
+
+  .video--default {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 2379px) {
+    .video--stretch {
+      margin-top: -5vw;
+    }
+  }
+
+  .marg-b-25 {
+    margin-bottom: 25px;
+  }
+
+  .section-container {
+    padding: 0 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .color-white-stretch {
+    color: #ffffff;
+  }
+
+  .tar {
+    text-align: right;
+  }
 </style>
 
 {% schema %}
@@ -180,6 +187,11 @@
       "type": "checkbox",
       "id": "checkbox_section_stretch",
       "label": "Stretch the section to full screen"
+    },
+    {
+      "type": "checkbox",
+      "id": "checkbox_section_exchange",
+      "label": "Swap the block of text and picture"
     }
   ]
 }

@@ -2217,10 +2217,6 @@ footer {
     }
 }
 
-.footer-logo{
-
-}
-
 @media screen and (min-width: 992px) {
     .header-icon:hover {
         filter: opacity(0.5);
