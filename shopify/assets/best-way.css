@@ -1,0 +1,143 @@
+.d-flex--default {
+    display: flex;
+}
+
+.d-flex--revert {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 992px) {
+    .wrap {
+        flex-direction: column;
+    }
+}
+
+.description--default {
+    width: 100%;
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .description--default {
+        justify-content: center;
+    }
+}
+
+.description--stretch {
+    background-color: #111010;
+}
+
+.tal {
+    text-align: left;
+}
+
+.tar {
+    text-align: right;
+}
+
+.description__best_way {
+    max-width: 700px;
+    margin-left: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .description__best_way {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+.description__best_way--exchange {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .h3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .h3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .h3 {
+        font-size: 42px;
+    }
+}
+
+.text {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .text {
+        line-height: 25px;
+    }
+}
+
+.btn--small {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    line-height: 17px;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn--small:hover {
+    text-decoration: none;
+}
+
+.video-wrap--default {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.video--default {
+    width: 100%;
+}
+
+@media screen and (min-width: 2379px) {
+    .video--stretch {
+        margin-top: -5vw;
+    }
+}
+
+.marg-b-25 {
+    margin-bottom: 25px;
+}
+
+.section-container {
+    padding: 0 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.color-white-stretch {
+    color: #ffffff;
+}
+
+.tar {
+    text-align: right;
+}
